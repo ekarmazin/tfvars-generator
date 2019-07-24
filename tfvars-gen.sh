@@ -103,8 +103,8 @@ if [[ $? -ne 0 ]]; then
   exit 5
 else
 
-  echo "aws_access_key_id = \"${aws_access_key_id}\"" > terraform.tfvars &&
-  echo "aws_secret_access_key = \"${aws_secret_access_key}\"" >> terraform.tfvars
+  echo "aws_access_key = \"${aws_access_key_id}\"" > terraform.tfvars &&
+  echo "aws_secret_key = \"${aws_secret_access_key}\"" >> terraform.tfvars
 
   # If no token in profile then skip it in outpout file
   if [[ ${aws_session_token} ]]; then
